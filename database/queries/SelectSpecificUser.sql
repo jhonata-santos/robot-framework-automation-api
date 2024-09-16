@@ -1,0 +1,1 @@
+SELECT * FROM Users WHERE id = ${user_id}
