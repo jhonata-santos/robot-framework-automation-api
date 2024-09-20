@@ -4,7 +4,7 @@ Resource             ../resources/users.resource
 
 *** Variables ***
 ${non_existing_user}    999999999
-${existing_user}        1
+${existing_user}        12
 
 *** Test Cases ***
 Validate endpoint contract success - Get Specific User

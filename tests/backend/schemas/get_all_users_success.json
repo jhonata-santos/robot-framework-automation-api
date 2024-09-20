@@ -1,32 +1,31 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Generated schema for Root",
-    "type": "array",
-    "items": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "number"
-        },
-        "name": {
-          "type": "string"
-        },
-        "dateOfBirth": {
-          "type": "string"
-        },
-        "cpf": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string"
-        }
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
       },
-      "required": [
-        "id",
-        "name",
-        "dateOfBirth",
-        "cpf",
-        "email"
-      ]
-    }
+      "name": {
+        "type": "string"
+      },
+      "dateOfBirth": {
+        "type": "string"
+      },
+      "cpf": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "dateOfBirth",
+      "cpf",
+      "email"
+    ]
   }
+}

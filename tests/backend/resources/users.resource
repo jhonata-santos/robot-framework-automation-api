@@ -31,8 +31,9 @@ Validate the contract returned by the endpoint
 
 A negative number error message must be returned with a status code
     [Documentation]        Essa keyword serve para validar a mensagem de erro e o status code 400 ao fazer uma requisição com user_id negativo
-    [Arguments]            ${status_code_expected}        ${response} 
-    Should Be Equal        ${response.text}               O ID deve ser um número positivo. (Parameter 'id')
+    [Arguments]            ${status_code_expected}           ${response} 
+    Should Be Equal        ${response.json()}[title]         Invalid User ID
+    Should Contain         ${response.json()}[detail]         Invalid user ID, value must be greater than zero
     Should Be Equal As Numbers    ${status_code_expected}    ${response.status_code} 
 
 A message of one or more errors must be returned with a status code

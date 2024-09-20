@@ -6,7 +6,7 @@ Resource         connections.resource
 
 *** Keywords ***
 Conectar na Base de Dados
-    [Documentation]        Essa keyword se conecta em um Bando de Dados SQL Server.
+    [Documentation]        Essa keyword se conecta em um Banco de Dados SQL Server.
     [Arguments]            ${banco}
     Connect To Database    pymssql
     ...                    ${${banco}.DBName}        ${${banco}.DBUser}
