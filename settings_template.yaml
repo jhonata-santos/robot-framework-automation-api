@@ -1,0 +1,5 @@
+# Marvel API Authentication: https://developer.marvel.com/documentation/authorization
+ts: insert your "ts" here
+public_key: insert your "public_key" here
+private_key: insert your "private_key" here
+md5_hash: insert your "md5_hash" here

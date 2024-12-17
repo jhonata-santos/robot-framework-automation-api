@@ -27,16 +27,11 @@ This project was developed using the following technologies:
 robot-project-automation/
 ├── database/                   # Database configs
 ├── reports/                    # Test execution reports
-├── tests/                      # Automated tests with Robot Framework
-│   ├── backend/                # Backend layer         
-│       ├── resources/          # Resource files (Keywords)
-│       ├── schemas/            # Schemas files (Schemas Json)
-│       ├── services/           # Services files (Requests endpoints)
-│       ├── specs/              # Specs files (Description Tests)
-│   ├── frontend/               # Frontend layer
-│       ├── TODO/               # To Be defined
-│   ├── mobile/                 # Mobile layer
-│       ├── TODO/               # To Be defined
+├── tests/                      # Automated tests with Robot Framework         
+│   ├── resources/          # Resource files (Keywords)
+│   ├── schemas/            # Schemas files (Schemas Json)
+│   ├── services/           # Services files (Requests endpoints)
+│   ├── specs/              # Specs files (Description Tests)
 ├── .gitignore                  # Files to be ignored by Git
 ├── README.md                   # Project documentation
 ├── requirements.txt            # Project dependencies
@@ -77,14 +72,14 @@ pip install -r requirements.txt
 To run the tests, use the following command:
 
 ```
-robot -d reports tests/backend/specs
+robot -d reports tests/specs
 ```
-This command runs all test suites in the ```tests/backend/specs``` directory and generates the reports in the ```reports``` folder.
+This command runs all test suites in the ```tests/specs``` directory and generates the reports in the ```reports``` folder.
 
 ### Parallel Execution (Pabot)
 To run tests in parallel, use Pabot:
 ```
-pabot --processes 4 -d reports tests/backend/specs
+pabot --processes 4 -d reports tests/specs
 ```
 This command runs the tests using 4 parallel processes.
 

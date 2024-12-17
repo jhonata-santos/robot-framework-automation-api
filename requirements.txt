@@ -9,7 +9,6 @@ pymssql
 robotframework-databaselibrary
 
 # Backend Dependencies
-pika
 robotframework-requests
 robotframework-jsonlibrary
 robotframework-jsonvalidator
