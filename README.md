@@ -1,48 +1,51 @@
-# Automation project for Acceptance Testing with Robot Framework
-Projeto de automação utilizando o Robot Framework, focado em automatização de testes de software e tarefas repetitivas (RPA).
+# Test Automation Project with Robot Framework for API
+Automation project using the Robot Framework with a focus on automating backend services, from healthcheck to contract, business and e2e scenarios.
 
 ## Table of Contents
 - [About the Project](#about-the-project)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
+- [Type of tests in the backend layer](#type-of-tests-in-the-backend-layer)
 - [Installation](#installation)
 - [How to Use](#how-to-use)
-- [Testing](#testing)
+- [Artifacts](#artifacts)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## About the Project
-robot-project-automation was developed with the aim of consolidating knowledges in test automation using the Robot Framework to software testing in all development layers (Backend, Frontend and Mobile). It allows the creation of automation scripts in a simple and efficient way, and can be integrated with several other libraries and tools.
+**robot-template-automation-api** was developed with the aim of consolidating the knowledge obtained in studies on test automation with Robot Framework for software testing in the Backend development layers.
+It allows the creation of automation scripts in a simple and efficient way, and can be integrated with several other libraries and tools.
 
 ## Technologies Used
 This project was developed using the following technologies:
 
 - Robot Framework - Test automation framework.
 - Python 3.8+ - Programming language.
-- SeleniumLibrary - Robot Framework library for web automation.
 - Pabot - Parallel test execution with Robot Framework.
 
 ## Project Structure
 ```
-robot-project-automation/
-├── database/                   # Database configs
+robot-template-automation-api/
+├── database/                   # Database configs e queries
 ├── reports/                    # Test execution reports
-├── tests/                      # Automated tests with Robot Framework         
-│   ├── resources/          # Resource files (Keywords)
-│   ├── schemas/            # Schemas files (Schemas Json)
-│   ├── services/           # Services files (Requests endpoints)
-│   ├── specs/              # Specs files (Description Tests)
+├── tests/                      # Automation Scenarios and Scripts  
+│   ├── schemas/                # Schemas files (Schemas Json)
+│   ├── services/               # Services files (Requests endpoints)
+│   ├── specs/                  # Specs files (Specification Tests)
+│   ├── steps/                  # Steps files (Keywords with test steps)
 ├── .gitignore                  # Files to be ignored by Git
+├── LICENSE                     # Definition of license for distribution
 ├── README.md                   # Project documentation
 ├── requirements.txt            # Project dependencies
+├── settings_template.yaml      # Sensitive and project configuration data
 ```
 
 ## Type of tests in the backend layer
-In the Backend layer, this project includes tests of the type
-- Healthcheck
-- Contract
-- Business
-- E2E
+In the Backend layer, this project includes tests of the type:
+- Healthcheck (Check success status code)
+- Contract (Check the json schemas of the endpoints)
+- Business (Check endpoint business rules)
+- E2E (Check integrations between endpoints)
 
 ## Installation
 
@@ -53,8 +56,8 @@ In the Backend layer, this project includes tests of the type
 ### Steps
 1. Clone the repository:
 ```
-git clone https://github.com/jhonata-santos/robot-project-automation.git
-cd robot-project-automation
+git clone https://github.com/jhonata-santos/robot-template-automation-api
+cd robot-template-automation-api
 ```
 2. Create a virtual environment:
 ```
@@ -83,8 +86,7 @@ pabot --processes 4 -d reports tests/specs
 ```
 This command runs the tests using 4 parallel processes.
 
-
-## Testing
+## Artifacts
 
 ### Reports
 The reports generated from the test execution will be available in the ```reports/``` folder. You can access them by opening the ```log.html``` file in a web browser.
@@ -92,11 +94,10 @@ The reports generated from the test execution will be available in the ```report
 ## Contributing
 Contributions are welcome! To contribute to this project:
 
-1. Fork the project.
-2. Create a new branch for your feature (```git checkout -b my-feature```).
-3. Commit your changes (```git commit -m 'Add my feature'```).
-4. Push to the remote repository (```git push origin my-feature```).
-5. Open a Pull Request.
+1. Create a new branch for your feature (```git checkout -b my-feature```).
+2. Commit your changes (```git commit -m 'Add my feature'```).
+3. Push to the remote repository (```git push origin my-feature```).
+4. Open a Pull Request.
 
 ## License
 This project is licensed under the MIT License.
