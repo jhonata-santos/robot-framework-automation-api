@@ -33,6 +33,11 @@ jobs:
           name: robot-framework-tests-results
           path: reports/
 
+      - name: Download reports
+        uses: actions/download-artifact@v1
+        with:
+          name: reports
+
       - name: Robot Reporter
         uses: joonvena/robotframework-reporter-action@v2.5
         with:
