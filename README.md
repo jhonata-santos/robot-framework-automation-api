@@ -34,10 +34,11 @@ robot-template-automation-api/
 │   ├── specs/                  # Specs files (Specification Tests)
 │   ├── steps/                  # Steps files (Keywords with test steps)
 ├── .gitignore                  # Files to be ignored by Git
+├── credentials_template.yaml   # Sensitive data
 ├── LICENSE                     # Definition of license for distribution
 ├── README.md                   # Project documentation
 ├── requirements.txt            # Project dependencies
-├── settings_template.yaml      # Sensitive and project configuration data
+├── settings.yaml               # Project Settings and Toggles
 ```
 
 ## Type of tests in the backend layer
