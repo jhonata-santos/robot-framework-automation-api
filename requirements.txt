@@ -5,3 +5,6 @@ pyyaml
 # Backend Dependencies
 robotframework-requests
 robotframework-jsonlibrary
+
+# CI
+robotframework-ghareports
