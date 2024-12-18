@@ -1,0 +1,38 @@
+name: Healthchecks
+
+on:
+  schedule:
+    - cron: '0 8-17 * * 2-6'
+
+jobs:
+  running-tests:
+    runs-on: ubuntu-24.04
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12.2
+
+      - name: Install pip dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Create file YAML credentials
+        run: |
+          echo "TS: ${{ secrets.TS }}" > credentials.yaml
+          echo "PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}" >> credentials.yaml
+          echo "MD5_HASH: ${{ secrets.MD5_HASH }}" >> credentials.yaml
+
+      - name: Run Tests
+        run: robot -d reports -i Healthcheck .
+
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-framework-tests-results
+          path: reports/
