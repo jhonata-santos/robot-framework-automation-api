@@ -5,13 +5,13 @@ Resource             ../../steps/characters/characters_steps.resource
 *** Test Cases ***
 Schema Succesfully - Fetches lists of characters
     [Documentation]    GET - "/v1/public/characters"
-    [tags]    Schema    Characters    Success    Test1
+    [tags]    Schema    Characters    Success
     ${response}    When to call the endpoint GET "/v1/public/characters" 
     Then the endpoint should return the schema correctly   ${response}    get_fetches_lists_of_characters_success
 
 Schema Succesfully - Fetches a single character by id
     [Documentation]    GET - "/v1/public/characters/{characterId}"
-    [tags]    Schema    Characters    Success    Test2
+    [tags]    Schema    Characters    Success
     ${response}    When to call the endpoint GET "/v1/public/characters/{characterId}"    1011334
     Then the endpoint should return the schema correctly    ${response}    get_fetches_a_single_character_by_id_success
 
