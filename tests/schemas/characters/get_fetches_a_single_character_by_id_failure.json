@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Generated schema for Root",
+    "type": "object",
+    "properties": {
+      "code": {
+        "type": "number",
+        "const": 404
+      },
+      "status": {
+        "type": "string",
+        "const": "We couldn't find that character"
+      }
+    },
+    "required": [
+      "code",
+      "status"
+    ]
+  }

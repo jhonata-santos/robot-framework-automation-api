@@ -2,7 +2,8 @@
 Library          RequestsLibrary
 Library          OperatingSystem
 Library          yaml
-Variables        ../../../settings.yaml
+Variables         ../../../settings.yaml
+Variables        ../../../credentials.yaml
 
 *** Variables ***
 ${BASE_URL}        http://gateway.marvel.com
@@ -12,45 +13,57 @@ request the endpoint "/v1/public/characters"
     ${response}    Get    
     ...    url=${BASE_URL}/v1/public/characters?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${MD5_HASH}
     ...    expected_status=any
+        
+    Run Keyword If    ${LOGS}    Log To Console    ${\n}${response.json()}
 
     RETURN       ${response}
 
 request the endpoint "/v1/public/characters/{characterId}"
-    ${characters}    Set Variable    1011334
+    [Arguments]    ${characterId}
     ${response}    Get    
-    ...    url=${BASE_URL}/v1/public/characters/${characters}?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${MD5_HASH}
+    ...    url=${BASE_URL}/v1/public/characters/${characterId}?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${MD5_HASH}
     ...    expected_status=any
 
+    Run Keyword If    ${LOGS}    Log To Console    ${\n}${response.json()}
+    
     RETURN       ${response}
 
 request the endpoint "/v1/public/characters/{characterId}/comics"
-    ${characters}    Set Variable    1011334
+    [Arguments]    ${characterId}
     ${response}    Get    
-    ...    url=${BASE_URL}/v1/public/characters/${characters}/comics?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${MD5_HASH}
+    ...    url=${BASE_URL}/v1/public/characters/${characterId}/comics?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${MD5_HASH}
     ...    expected_status=any
+    
+    Run Keyword If    ${LOGS}    Log To Console    ${\n}${response.json()}
 
     RETURN       ${response}
 
 request the endpoint "/v1/public/characters/{characterId}/events"
-    ${characters}    Set Variable    1011334
+    [Arguments]    ${characterId}
     ${response}    Get    
-    ...    url=${BASE_URL}/v1/public/characters/${characters}/events?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${MD5_HASH}
+    ...    url=${BASE_URL}/v1/public/characters/${characterId}/events?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${MD5_HASH}
     ...    expected_status=any
+
+    Run Keyword If    ${LOGS}    Log To Console    ${\n}${response.json()}
 
     RETURN       ${response}
 
 request the endpoint "/v1/public/characters/{characterId}/series"
-    ${characters}    Set Variable    1011334
+    [Arguments]    ${characterId}
     ${response}    Get    
-    ...    url=${BASE_URL}/v1/public/characters/${characters}/series?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${MD5_HASH}
+    ...    url=${BASE_URL}/v1/public/characters/${characterId}/series?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${MD5_HASH}
     ...    expected_status=any
+
+    Run Keyword If    ${LOGS}    Log To Console    ${\n}${response.json()}
 
     RETURN       ${response}
 
 request the endpoint "/v1/public/characters/{characterId}/stories"
-    ${characters}    Set Variable    1011334
+    [Arguments]    ${characterId}
     ${response}    Get    
-    ...    url=${BASE_URL}/v1/public/characters/${characters}/stories?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${MD5_HASH}
+    ...    url=${BASE_URL}/v1/public/characters/${characterId}/stories?ts=${TS}&apikey=${PUBLIC_KEY}&hash=${MD5_HASH}
     ...    expected_status=any
+
+    Run Keyword If    ${LOGS}    Log To Console    ${\n}${response.json()}
 
     RETURN       ${response}

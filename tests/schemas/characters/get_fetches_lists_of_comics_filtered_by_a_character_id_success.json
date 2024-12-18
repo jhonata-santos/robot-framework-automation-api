@@ -1,0 +1,451 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string"
+    },
+    "copyright": {
+      "type": "string"
+    },
+    "attributionText": {
+      "type": "string"
+    },
+    "attributionHTML": {
+      "type": "string"
+    },
+    "etag": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "offset": {
+          "type": "number"
+        },
+        "limit": {
+          "type": "number"
+        },
+        "total": {
+          "type": "number"
+        },
+        "count": {
+          "type": "number"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "digitalId": {
+                "type": "number"
+              },
+              "title": {
+                "type": "string"
+              },
+              "issueNumber": {
+                "type": "number"
+              },
+              "variantDescription": {
+                "type": "string"
+              },
+              "description": {
+                "type": ["string", "null"]
+              },
+              "modified": {
+                "type": "string"
+              },
+              "isbn": {
+                "type": "string"
+              },
+              "upc": {
+                "type": "string"
+              },
+              "diamondCode": {
+                "type": "string"
+              },
+              "ean": {
+                "type": "string"
+              },
+              "issn": {
+                "type": "string"
+              },
+              "format": {
+                "type": "string"
+              },
+              "pageCount": {
+                "type": "number"
+              },
+              "textObjects": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "language": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "language",
+                    "text"
+                  ]
+                }
+              },
+              "resourceURI": {
+                "type": "string"
+              },
+              "urls": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "url"
+                  ]
+                }
+              },
+              "series": {
+                "type": "object",
+                "properties": {
+                  "resourceURI": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "resourceURI",
+                  "name"
+                ]
+              },
+              "variants": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "resourceURI": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceURI",
+                    "name"
+                  ]
+                }
+              },
+              "collections": {
+                "type": "array",
+                "items": {}
+              },
+              "collectedIssues": {
+                "type": "array",
+                "items": {}
+              },
+              "dates": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "date": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "date"
+                  ]
+                }
+              },
+              "prices": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "price": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "price"
+                  ]
+                }
+              },
+              "thumbnail": {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "type": "string"
+                  },
+                  "extension": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "path",
+                  "extension"
+                ]
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string"
+                    },
+                    "extension": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "extension"
+                  ]
+                }
+              },
+              "creators": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "number"
+                  },
+                  "collectionURI": {
+                    "type": "string"
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "resourceURI": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "role": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "resourceURI",
+                        "name",
+                        "role"
+                      ]
+                    }
+                  },
+                  "returned": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "available",
+                  "collectionURI",
+                  "items",
+                  "returned"
+                ]
+              },
+              "characters": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "number"
+                  },
+                  "collectionURI": {
+                    "type": "string"
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "resourceURI": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "resourceURI",
+                        "name"
+                      ]
+                    }
+                  },
+                  "returned": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "available",
+                  "collectionURI",
+                  "items",
+                  "returned"
+                ]
+              },
+              "stories": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "number"
+                  },
+                  "collectionURI": {
+                    "type": "string"
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "resourceURI": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "resourceURI",
+                        "name",
+                        "type"
+                      ]
+                    }
+                  },
+                  "returned": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "available",
+                  "collectionURI",
+                  "items",
+                  "returned"
+                ]
+              },
+              "events": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "number"
+                  },
+                  "collectionURI": {
+                    "type": "string"
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "resourceURI": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "resourceURI",
+                        "name"
+                      ]
+                    }
+                  },
+                  "returned": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "available",
+                  "collectionURI",
+                  "items",
+                  "returned"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "digitalId",
+              "title",
+              "issueNumber",
+              "variantDescription",
+              "modified",
+              "isbn",
+              "upc",
+              "diamondCode",
+              "ean",
+              "issn",
+              "format",
+              "pageCount",
+              "textObjects",
+              "resourceURI",
+              "urls",
+              "series",
+              "variants",
+              "collections",
+              "collectedIssues",
+              "dates",
+              "prices",
+              "thumbnail",
+              "images",
+              "creators",
+              "characters",
+              "stories",
+              "events"
+            ]
+          }
+        }
+      },
+      "required": [
+        "offset",
+        "limit",
+        "total",
+        "count",
+        "results"
+      ]
+    }
+  },
+  "required": [
+    "code",
+    "status",
+    "copyright",
+    "attributionText",
+    "attributionHTML",
+    "etag",
+    "data"
+  ]
+}

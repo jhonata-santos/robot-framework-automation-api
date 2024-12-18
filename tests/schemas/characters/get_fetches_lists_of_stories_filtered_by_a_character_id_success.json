@@ -1,0 +1,309 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string"
+    },
+    "copyright": {
+      "type": "string"
+    },
+    "attributionText": {
+      "type": "string"
+    },
+    "attributionHTML": {
+      "type": "string"
+    },
+    "etag": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "offset": {
+          "type": "number"
+        },
+        "limit": {
+          "type": "number"
+        },
+        "total": {
+          "type": "number"
+        },
+        "count": {
+          "type": "number"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "resourceURI": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "modified": {
+                "type": "string"
+              },
+              "thumbnail": {},
+              "creators": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "number"
+                  },
+                  "collectionURI": {
+                    "type": "string"
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "resourceURI": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "role": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "resourceURI",
+                        "name",
+                        "role"
+                      ]
+                    }
+                  },
+                  "returned": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "available",
+                  "collectionURI",
+                  "items",
+                  "returned"
+                ]
+              },
+              "characters": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "number"
+                  },
+                  "collectionURI": {
+                    "type": "string"
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "resourceURI": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "resourceURI",
+                        "name"
+                      ]
+                    }
+                  },
+                  "returned": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "available",
+                  "collectionURI",
+                  "items",
+                  "returned"
+                ]
+              },
+              "series": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "number"
+                  },
+                  "collectionURI": {
+                    "type": "string"
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "resourceURI": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "resourceURI",
+                        "name"
+                      ]
+                    }
+                  },
+                  "returned": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "available",
+                  "collectionURI",
+                  "items",
+                  "returned"
+                ]
+              },
+              "comics": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "number"
+                  },
+                  "collectionURI": {
+                    "type": "string"
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "resourceURI": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "resourceURI",
+                        "name"
+                      ]
+                    }
+                  },
+                  "returned": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "available",
+                  "collectionURI",
+                  "items",
+                  "returned"
+                ]
+              },
+              "events": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "number"
+                  },
+                  "collectionURI": {
+                    "type": "string"
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "resourceURI": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "resourceURI",
+                        "name"
+                      ]
+                    }
+                  },
+                  "returned": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "available",
+                  "collectionURI",
+                  "items",
+                  "returned"
+                ]
+              },
+              "originalIssue": {
+                "type": "object",
+                "properties": {
+                  "resourceURI": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "resourceURI",
+                  "name"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "description",
+              "resourceURI",
+              "type",
+              "modified",
+              "thumbnail",
+              "creators",
+              "characters",
+              "series",
+              "comics",
+              "events",
+              "originalIssue"
+            ]
+          }
+        }
+      },
+      "required": [
+        "offset",
+        "limit",
+        "total",
+        "count",
+        "results"
+      ]
+    }
+  },
+  "required": [
+    "code",
+    "status",
+    "copyright",
+    "attributionText",
+    "attributionHTML",
+    "etag",
+    "data"
+  ]
+}

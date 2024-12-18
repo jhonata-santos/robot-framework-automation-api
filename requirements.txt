@@ -1,14 +1,7 @@
-# General Dependencies
-setuptools
-pyyaml
+# # General Dependencies
 robotframework
-robotframework-faker
-
-# Database Dependencies
-pymssql
-robotframework-databaselibrary
+pyyaml
 
 # Backend Dependencies
 robotframework-requests
 robotframework-jsonlibrary
-robotframework-jsonvalidator

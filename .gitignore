@@ -6,6 +6,6 @@
 .DS_Store
 .csv
 .log
-.settings.yaml
+.credentials.yaml
 /results
 /reports

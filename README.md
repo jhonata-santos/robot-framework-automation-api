@@ -1,5 +1,5 @@
 # Test Automation Project with Robot Framework for API
-Automation project using the Robot Framework with a focus on automating backend services, from healthcheck to contract, business and e2e scenarios.
+Automation project using the Robot Framework with a focus on automating backend services. With healthcheck, schema, business and e2e tests.
 
 ## Table of Contents
 - [About the Project](#about-the-project)
@@ -43,7 +43,7 @@ robot-template-automation-api/
 ## Type of tests in the backend layer
 In the Backend layer, this project includes tests of the type:
 - Healthcheck (Check success status code)
-- Contract (Check the json schemas of the endpoints)
+- Schema (Check the json schemas of the endpoints)
 - Business (Check endpoint business rules)
 - E2E (Check integrations between endpoints)
 

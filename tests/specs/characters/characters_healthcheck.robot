@@ -4,37 +4,37 @@ Resource             ../../steps/characters/characters_steps.resource
 
 *** Test Cases ***
 Healthcheck - Fetches lists of characters
-    [Documentation]    GET "/v1/public/characters"
+    [Documentation]    GET - "/v1/public/characters"
     [tags]    Healhtcheck    Characters
     ${response}    When to call the endpoint GET "/v1/public/characters"
     Then the endpoint should return status code    200    ${response}
 
 Healthcheck - Fetches a single character by id
-    [Documentation]    GET "/v1/public/characters/{characterId}"
+    [Documentation]    GET - "/v1/public/characters/{characterId}"
     [tags]    Healhtcheck    Characters
-    ${response}    When to call the endpoint GET "/v1/public/characters/{characterId}"
+    ${response}    When to call the endpoint GET "/v1/public/characters/{characterId}"    1011334
     Then the endpoint should return status code    200    ${response}
 
 Healthcheck - Fetches lists of comics filtered by a character id
-    [Documentation]    GET "/v1/public/characters/{characterId}/comics"
+    [Documentation]    GET - "/v1/public/characters/{characterId}/comics"
     [tags]    Healhtcheck    Characters
-    ${response}    When to call the endpoint GET "/v1/public/characters/{characterId}/comics"
+    ${response}    When to call the endpoint GET "/v1/public/characters/{characterId}/comics"    1011334
     Then the endpoint should return status code    200    ${response}
 
 Healthcheck - Fetches lists of events filtered by a character id
-    [Documentation]    GET "/v1/public/characters/{characterId}/events"
+    [Documentation]    GET - "/v1/public/characters/{characterId}/events"
     [tags]    Healhtcheck    Characters
-    ${response}    When to call the endpoint GET "/v1/public/characters/{characterId}/events"
+    ${response}    When to call the endpoint GET "/v1/public/characters/{characterId}/events"    1011334
     Then the endpoint should return status code    200    ${response}
 
 Healthcheck - Fetches lists of series filtered by a character id
-    [Documentation]    GET "/v1/public/characters/{characterId}/series"
+    [Documentation]    GET - "/v1/public/characters/{characterId}/series"
     [tags]    Healhtcheck    Characters
-    ${response}    When to call the endpoint GET "/v1/public/characters/{characterId}/series"
+    ${response}    When to call the endpoint GET "/v1/public/characters/{characterId}/series"    1011334
     Then the endpoint should return status code    200    ${response}
 
 Healthcheck - Fetches lists of stories filtered by a character id
-    [Documentation]    GET "/v1/public/characters/{characterId}/stories"
+    [Documentation]    GET - "/v1/public/characters/{characterId}/stories"
     [tags]    Healhtcheck    Characters
-    ${response}    When to call the endpoint GET "/v1/public/characters/{characterId}/stories"
+    ${response}    When to call the endpoint GET "/v1/public/characters/{characterId}/stories"    1011334
     Then the endpoint should return status code    200    ${response}
