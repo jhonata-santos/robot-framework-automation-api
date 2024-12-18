@@ -26,6 +26,8 @@ This project was developed using the following technologies:
 ## Project Structure
 ```
 robot-template-automation-api/
+├── .github/                    # 
+│   ├── workflows/              # 
 ├── database/                   # Database configs e queries
 ├── reports/                    # Test execution reports
 ├── tests/                      # Automation Scenarios and Scripts  

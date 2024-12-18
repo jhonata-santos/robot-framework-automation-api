@@ -1,4 +1,4 @@
-name: CI
+name: Execute All Tests
 
 on:
   push:
@@ -6,10 +6,8 @@ on:
   pull_request:
     branches: master
 
-  workflow_dispatch:
-
 jobs:
-  build:
+  execute-tests:
     runs-on: ubuntu-24.04
     
     steps:
