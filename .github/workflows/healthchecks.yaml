@@ -29,7 +29,7 @@ jobs:
           echo "MD5_HASH: ${{ secrets.MD5_HASH }}" >> credentials.yaml
 
       - name: Run Tests
-        run: robot -d reports -i Healthcheck .
+        run: robot -d reports -i Healhtcheck .
 
       - name: Upload Test Report
         uses: actions/upload-artifact@v4
