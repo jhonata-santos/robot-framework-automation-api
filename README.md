@@ -9,6 +9,7 @@ Automation project using the Robot Framework with a focus on automating backend 
 - [Installation](#installation)
 - [How to Use](#how-to-use)
 - [Artifacts](#artifacts)
+- [Git Actions](#git-actions)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -93,6 +94,25 @@ This command runs the tests using 4 parallel processes.
 
 ### Reports
 The reports generated from the test execution will be available in the ```reports/``` folder. You can access them by opening the ```log.html``` file in a web browser.
+
+## Git Actions
+We used Git Actions to automate tasks and ensure the quality of our code. Below you will find a description of the actions that were created:
+
+1. **Sandbox:** <br>
+**Objective:** To run scripts in a controlled environment before merging. <br>
+**How it works:** An action is taken before merging to ensure that scripts are run in a controlled environment.
+
+2. **Healthcheck:** <br>
+**Objective:** Check the health of the environment every hour. <br>
+**How it works:** The action is carried out every hour, from 8 am to 5 pm, Monday to Friday, to ensure that the environment is working properly.
+
+3. **Schema:** <br>
+**Objective:** Check if there has been a change in the endpoints' contract. <br>
+**How it works:** The action is executed once a day, from Monday to Friday, to ensure that the endpoints' schema is up to date.
+
+4. **Execute All Tests:** <br>
+**Objective:** Run the entire test suite after a push or PR to master. <br>
+**How it works:** An action is performed whenever a push or PR is made to a master branch, ensuring that a full test suite is performed.
 
 ## Contributing
 Contributions are welcome! To contribute to this project:
